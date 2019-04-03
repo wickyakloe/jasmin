@@ -28,6 +28,27 @@ describe("Calculator", function() {
  });
 });
 
+//Challenge write some test for the Drink About game
+describe("whatCanIDrink", function() {
+    describe("Age test", function() {
+        it("age less then 0 should return Sorry. I can’t tell what drink because that age is incorrect!", function(){
+         expect(whatCanIDrink(-1)).toBe("Sorry. I can’t tell what drink because that age is incorrect!");
+        });
+        it("age less then 14 should return Drink Toddy", function(){
+         expect(whatCanIDrink(13)).toBe("Drink Toddy");
+        });
+        it("age less then 18 should return Drink Coke", function(){
+         expect(whatCanIDrink(17)).toBe("Drink Coke");
+        });
+        it("age less then 21 should return Drink Beer", function(){
+         expect(whatCanIDrink(20)).toBe("Drink Beer");
+        });
+        it("age less then 130 should return Drink Whiskey", function(){
+         expect(whatCanIDrink(129)).toBe("Drink Whiskey");
+        });
+    })
+    
+})
 
 //Test related to the function addtion
 /*
