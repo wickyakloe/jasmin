@@ -7,7 +7,10 @@ describe("Calculator", function() {
          expect(addition(7, 19)).toBe(26);
      });
      it("should return an error if we dont suplly two numbers", function() {
-         expect(addition("Hitchhikers", "Guide")).toBe("Error!");
+         // expect(addition("Hitchhikers", "Guide")).toBe("Error!");
+         spyOn(window, "alert");
+         addition("Hitchhikers", "Galaxy");
+         expect(window.alert).toHaveBeenCalledWith("Error!");
      })
  });
 });
